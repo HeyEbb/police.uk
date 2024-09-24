@@ -17,7 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex bg-gray-100 w-full flex-col items-center min-h-screen">
         <Header />
-        <div className="p-3">{children}
+        <div className="core-container m-2">
+        {children}
         </div>
       </body>
     </html>

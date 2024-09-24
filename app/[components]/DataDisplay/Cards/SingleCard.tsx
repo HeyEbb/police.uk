@@ -1,17 +1,13 @@
-interface SingleCardProps {
-  item: {
-    title: string;
-    description: string;
-    link: string;
-  };
-}
+import { cardType } from "@/app/[types]/card.type";
 
-export default function SingleCard({ data }: SingleCardProps[]) {
+export default function SingleCard({ data }: { data: cardType }): JSX.Element {
   return (
-    <div className="bg-yellow-400 border border-black">
+    <div className="bg-white border border-neutral-300 rounded-md p-6 w-full">
       <h1>{data.title}</h1>
       <p>{data.description}</p>
-      <a href={data.link}>Link</a>
+      <button>
+                
+      </button>
     </div>
   );
 }

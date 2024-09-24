@@ -1,6 +1,6 @@
 export default function LandingHero() {
   return (
-    <section className="w-full bg-green-600 core-container h-[700px] flex flex-col justify-center items-center p-52 text-center">
+    <section className="w-full bg-green-600 core-container md:h-[700px] h-[50vh] flex flex-col justify-center items-center p-8 md:p-52 text-center">
       <h1>Find where crimes are happening near you</h1>
       <p>
         Curious about the crime rates in your neighborhood? Simply enter your

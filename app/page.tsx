@@ -1,41 +1,38 @@
 import LandingHero from "./[components]/Landing/LandingHero";
 import CardGroup from "./[components]/DataDisplay/Cards/CardGroup";
+import { cardType } from "./[types]/card.type";
 
 export default function Home() {
-
-  interface Data {
-    title: string;
-    description: string;
-    link: string;
-  }
-
-  const data: Data[] = [
+  
+  const data: cardType[] = [
     {
-      title: "Title 1",
-      description: "Description 1",
-      link: 'https://www.google.com',
+      title: "Contact & Report",
+      description: "How to contact your local force and report a crime.",
+      link: "https://www.google.com",
     },
     {
-      title: "Title 2",
-      description: "Description 2",
-      link: 'https://www.google.com',
+      title: "Information",
+      description: "Information on different types of crime.",
+      link: "https://www.google.com",
     },
     {
-      title: "Title 3",
-      description: "Description 3",
-      link: 'https://www.google.com',
+      title: "Support",
+      description: "Getting help and support from the police.",
+      link: "https://www.google.com",
     },
     {
-      title: "Title 4",
-      description: "Description 4",
-      link: 'https://www.google.com',
+      title: "Crime Statistics",
+      description: "View crime statistics from around the UK.",
+      link: "https://www.google.com",
     },
-  ]
+  ];
 
   return (
     <>
       <LandingHero />
-      <CardGroup data={data} />
+      <div className="px-6">
+        <CardGroup data={data} />
+      </div>
     </>
   );
 }

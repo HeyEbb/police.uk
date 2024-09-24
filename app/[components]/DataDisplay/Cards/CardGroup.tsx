@@ -1,25 +1,17 @@
-import React from 'react';
-import SingleCard from './SingleCard';
-
-
-interface Data {
-  title: string;
-  description: string;
-  link: string;
-}
+import React from "react";
+import SingleCard from "./SingleCard";
+import { cardType } from "@/app/[types]/card.type";
 
 interface CardGroupProps {
-  data: Data[];
+  data: cardType[];
 }
 
-const CardGroup: React.FC<CardGroupProps> = ({ data }) => {
+export default function CardGroup({ data }: CardGroupProps): JSX.Element {
   return (
-    <div className='flex'>
-      {data.map((item, index) => (
+    <div className="flex justify-center flex-col md:flex-row gap-3 -mt-10">
+      {data.map((item: cardType, index: number) => (
         <SingleCard key={index} data={item} />
       ))}
     </div>
   );
-};
-
-export default CardGroup;
+}
