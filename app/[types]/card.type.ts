@@ -1,6 +1,7 @@
-export type cardType = {
-  title: string;
-  description: string;
-  linkString?: string;
-  link: string;
-};
+import { tButtonType } from "./button.type";
+
+export type tCardType = {
+    title: string;
+    description: string;
+    buttons: tButtonType[];
+  };

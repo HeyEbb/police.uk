@@ -1,29 +1,52 @@
-import LandingHero from "./[components]/Landing/LandingHero";
-import CardGroup from "./[components]/DataDisplay/Cards/CardGroup";
-import { cardType } from "./[types]/card.type";
+import LandingHero from "./[components]/landing-page/LandingHero";
+import CardGroup from "./[components]/data-display/cards/CardGroup";
+import { tCardType } from "./[types]/card.type";
 
 export default function Home() {
-  
-  const data: cardType[] = [
+  const data: tCardType[] = [
     {
       title: "Contact & Report",
       description: "How to contact your local force and report a crime.",
-      link: "https://www.google.com",
+      buttons: [
+        {
+          title: "Contact",
+          url: "https://www.google.com",
+        },
+        {
+          title: "Report",
+          url: "https://www.google.com",
+        },
+      ],
     },
     {
       title: "Information",
       description: "Information on different types of crime.",
-      link: "https://www.google.com",
+      buttons: [
+        {
+          title: "Fraud",
+          url: "https://www.google.com",
+        },
+      ],
     },
     {
       title: "Support",
       description: "Getting help and support from the police.",
-      link: "https://www.google.com",
+      buttons: [
+        {
+          title: "Fraud",
+          url: "https://www.google.com",
+        },
+      ],
     },
     {
       title: "Crime Statistics",
       description: "View crime statistics from around the UK.",
-      link: "https://www.google.com",
+      buttons: [
+        {
+          title: "Fraud",
+          url: "https://www.google.com",
+        },
+      ],
     },
   ];
 
