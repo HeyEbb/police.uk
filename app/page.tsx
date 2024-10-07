@@ -3,7 +3,7 @@ import CardGroup from "./[components]/data-display/cards/CardGroup";
 import { tCardType } from "./[types]/card.type";
 
 export default function Home() {
-  const data: tCardType[] = [
+  const quickStartData: tCardType[] = [
     {
       title: "Contact & Report",
       description: "How to contact your local force and report a crime.",
@@ -11,10 +11,7 @@ export default function Home() {
         {
           title: "Contact",
           url: "https://www.google.com",
-        },
-        {
-          title: "Report",
-          url: "https://www.google.com",
+          navigate: '/contact',
         },
       ],
     },
@@ -23,7 +20,7 @@ export default function Home() {
       description: "Information on different types of crime.",
       buttons: [
         {
-          title: "Fraud",
+          title: "Information",
           url: "https://www.google.com",
         },
       ],
@@ -33,7 +30,7 @@ export default function Home() {
       description: "Getting help and support from the police.",
       buttons: [
         {
-          title: "Fraud",
+          title: "Support",
           url: "https://www.google.com",
         },
       ],
@@ -43,7 +40,7 @@ export default function Home() {
       description: "View crime statistics from around the UK.",
       buttons: [
         {
-          title: "Fraud",
+          title: "Crime Statistics",
           url: "https://www.google.com",
         },
       ],
@@ -54,7 +51,7 @@ export default function Home() {
     <>
       <LandingHero />
       <div className="px-6">
-        <CardGroup data={data} />
+        <CardGroup data={quickStartData} />
       </div>
     </>
   );

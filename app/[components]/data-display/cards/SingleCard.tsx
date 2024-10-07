@@ -6,10 +6,10 @@ export default function SingleCard({ data }: { data: tCardType }): JSX.Element {
   return (
     <article className={card.card}>
       <div>
-        <h1>{data.title}</h1>
+        <h3>{data.title}</h3>
         <p>{data.description}</p>
       </div>
-      <section className="mt-4">
+      <section className="mt-6">
         <ButtonGroup data={data.buttons} direction="col" />
       </section>
     </article>

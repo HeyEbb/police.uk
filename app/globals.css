@@ -11,6 +11,10 @@ h1 {
   @apply font-sans text-3xl font-bold text-gray-800 mb-3
 }
 
+h3 {
+  @apply font-sans text-xl font-bold text-gray-800 mb-2
+}
+
 button {
   @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
 }
@@ -21,4 +25,8 @@ input {
 
 .core-container {
   @apply w-full max-w-[1400px];
+}
+
+footer {
+  @apply w-full
 }
