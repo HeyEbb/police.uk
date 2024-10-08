@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../src/img/puk-logo.png";
 import Image from "next/image";
 import { LuMenu, LuX } from "react-icons/lu";
@@ -11,6 +11,14 @@ import header from "../sass/header/header.module.scss";
 export default function Header() {
   /* --------------------------------- states --------------------------------- */
   const [siderOpen, setSiderOpen] = useState(false);
+
+  useEffect(() => {
+    if (siderOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [siderOpen]);
 
   const navigationData = [
     {
@@ -34,15 +42,9 @@ export default function Header() {
   return (
     <>
       {/* container */}
-      <section className="w-full bg-blue-600 flex justify-center items-center px-5 h-16">
-        <span className="core-container flex justify-between items-center">
-          <Image
-            className="p-3"
-            src={Logo}
-            alt="logo"
-            width={100}
-            height={100}
-          />
+      <section className={header.bar}>
+        <span className={header.inner + " core-container"}>
+          <Image src={Logo} alt="Police UK logo" width={150} height={100} />
           <span className="flex">
             <LuMenu
               className={header.icon}
@@ -61,18 +63,18 @@ export default function Header() {
 
       {/* sidebar */}
       {siderOpen && (
-        <section className="bg-gray-800 absolute left-0 h-[100vh] w-80">
+        <section className="bg-gray-900 absolute left-0 h-[100vh] w-80 p-4">
           {/* header of siderbar */}
-          <div className=" w-full flex justify-between p-3">
-            <h3 className="text-white mb-0">Sidebar title here</h3>
+          <div className=" w-full flex justify-between items-center">
+            <h3 className="text-white m-0">Sidebar title here</h3>
             <LuX
               className={header.closeIcon}
               onClick={() => setSiderOpen(false)}
             />
           </div>
-          <hr/>
+          <hr className="border-gray-700 my-4" />
           {/* pages */}
-          <nav className="flex flex-col m-3 gap-1">
+          <nav className="flex flex-col gap-1">
             {navigationData.map((item) => (
               <a key={item.id} href={item.link} className={header.mobileItem}>
                 {item.name}

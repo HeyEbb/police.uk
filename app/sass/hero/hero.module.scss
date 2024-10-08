@@ -1,0 +1,7 @@
+.regular {
+    @apply bg-indigo-600 w-full min-h-60 rounded-md flex justify-center items-center flex-col text-center
+}
+
+.inner {
+    @apply max-w-2xl
+}
