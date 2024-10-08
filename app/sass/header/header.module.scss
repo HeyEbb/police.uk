@@ -1,0 +1,15 @@
+.icon {
+    @apply text-white text-2xl md:hidden cursor-pointer hover:transform hover:scale-110 duration-300
+}
+
+.navigation {
+    @apply hidden md:flex md:gap-3 text-white text-sm
+}
+
+.closeIcon {
+    @apply text-white text-2xl cursor-pointer
+}
+
+.mobileItem {
+    @apply text-white text-base cursor-pointer p-1 hover:bg-indigo-400 rounded
+}
